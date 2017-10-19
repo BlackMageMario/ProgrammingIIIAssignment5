@@ -5,11 +5,13 @@
  */
 package programmingiiassignment5;
 
+import java.io.Serializable;
+
 /**
  *
  * @author BlackMageMario
  */
-public class Item {
+public class Item implements Serializable{
     private String itemName;
     private float price;
     private int quantity;

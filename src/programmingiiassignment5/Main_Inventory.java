@@ -5,6 +5,9 @@
  */
 package programmingiiassignment5;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +17,7 @@ import java.util.ArrayList;
 public class Main_Inventory {
     /*public static void main(String... args)
     {
+       
         ArrayList<Inventory> inventoryItems = new ArrayList<Inventory>();
         inventoryItems.add(new Inventory("1000", "Apple", 30, 2.50f, 1.25f));
         inventoryItems.add(new Inventory("1001", "Orange", 40, 2f, 1f));
@@ -28,6 +32,17 @@ public class Main_Inventory {
         for(Inventory item : inventoryItems)
         {
             System.out.println(item.toString());
+        }
+        try
+        {
+            FileOutputStream out = new FileOutputStream(Inventory.fileName);
+            ObjectOutputStream s = new ObjectOutputStream(out);
+            s.writeObject(inventoryItems);
+            s.flush();
+        }
+        catch(IOException ex)
+        {
+            System.err.println(ex.getMessage());
         }
     }*/
 }

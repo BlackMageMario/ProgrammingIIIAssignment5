@@ -5,15 +5,18 @@
  */
 package programmingiiassignment5;
 
+import java.io.Serializable;
+
 /**
  *
  * @author BlackMageMario
  */
-public class Inventory {
+public class Inventory implements Serializable {
     private String sku;
     private float cost;
     private Item item;
     private String itemName;
+    public static String fileName = "inventory.txt";
     public Inventory(String sku, String itemName, 
             int quantity, float price, float cost)
     {
